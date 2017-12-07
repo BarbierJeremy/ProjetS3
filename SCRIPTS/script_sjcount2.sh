@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 #Boucle pour exécuter sjcount sur chaque fichier bam 
 for file in $(ls /data/fluhit/bam/*.bam)

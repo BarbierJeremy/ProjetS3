@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 for file in $(ls /data/fluhit/bam/*.bam)
 do

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 #Script servant à tester le filtering. Il filtre selon un seuil, indiqué en argument du script python (ici, 10, valeur arbitraire). 
 

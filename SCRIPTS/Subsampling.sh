@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 #Exécution de samtools view pour ne récupérer qu'une partie des fichiers bam (1%, au hasard), afin de pourvoir utiliser igv de manière correcte (question de complexité mémoire). 
 
