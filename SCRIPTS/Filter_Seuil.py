@@ -27,10 +27,10 @@ def Make_Treshold_Dict(Tresh_File) :
 		if line == "" :
 			Fini = True
 		else :
-			#Pour chaque ligne, récupérer le segment, et 10% du seuil 
+			#Pour chaque ligne, récupérer le segment, et 30% du seuil 
 			Line = line.split("\t")
 			Tresh = int(Line[1])
-			Tresh_10 = (Tresh/100) * 10
+			Tresh_10 = (Tresh/100) * 30
 			Dict[Line[0]] = Tresh_10
 	return Dict
 
