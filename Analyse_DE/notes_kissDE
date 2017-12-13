@@ -1,0 +1,74 @@
+#Intro
+Input = comptages de read pour chaque variant et chaque condition.
+output = p-value ajustée et mesure (Df/Dpsi) qui indique la magnitude de l'effet.
+
+Jeu de données peut être divisé en 2 en cas d'épissage : 
+- inclusion de l'intron
+- exclusion de l'intron
+
+#PREREQUIS
+Table de comptages brut + vector decrivant nombre de conditions et de réplicats
+
+#Table de comptagess brut
+
+myCounts <- dataframekissDE
+
+head(dataframekissDE)
+X0 X1 X2 X3 X4 X5
+1 variation1 127 955 897 302 443
+2 variation1 80 17 20 5 2
+3 variation2 1543 450 599 400 325
+4 variation2 1201 1 5 4 0
+5 variation3 221 1192 881 479 587
+6 variation3 219 83 48 50 37
+
+1 variant = 2 lignes
+X0 = nom du variant
+X1 = taille du variant
+X2 etc = comptages pour chaque conditions et réplicats
+
+#Vecteur avec conditions expérimentales
+
+myConditions <- c("condition1", "condition1", "condition2", "condition2")
+
+
+#TEST
+finalTable <- diffExpressedVariants (myCounts, myConditions, pvalue=1)
+
+
+#NORMALISATION  DES COMPTAGES
+comme DESeq
+
+#FILTRATION COMPTAGES BAS AVANT LES TEST
+
+filterLowCountsVariants : valeur par défaut = comptages <10
+
+#TEST
+Binomiale négative
+
+log λij = µ + αi + βj + (αβ)ij
+
+H0 : (αβ) = 0 : pas d'interaction entre l'allèle et la condition
+Testée avec LRT avec FDR de 5%
+
+#MAGNITUDE DE L'EFFET : DELTA PSI / DELTA f COMPUTATION
+Pour quantifier la magnitude de l'effet on utilise Le "Percent Spliced In" (PSI) (= f = fréquence des allèles) entre deux conditions.
+
+#CORRECTION AVEC LE RESPECT DE LA LONGUEUR (seulement si on utilise kissSplice ???)
+upper_path : inclusion intron (le plus long)
+lower_path : exclusion intron
+overlap ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
