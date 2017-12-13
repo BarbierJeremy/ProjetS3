@@ -23,7 +23,7 @@ def read(path_nb_read):
 		
 		line = line.rstrip().split(',')
 		if (line[0].split('_')[0] == test):
-			junction_p_ns1 = int(line[1]) 
+			junction_p_ns1 = int(line[1])
 			nb_read_p_ns1 = int(line[2])
 	f2.close()
 	nom = 'CY010792.1'
