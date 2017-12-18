@@ -1,5 +1,5 @@
 import sys, os
-path_nb_read = sys.argv[1]
+##path_nb_read = sys.argv[1]
 
 def read(path_nb_read):
 	sortie = path_nb_read.rstrip('IdxStats.txt')
@@ -39,4 +39,5 @@ def read(path_nb_read):
 
 
 
-read(path_nb_read)
+##read(path_nb_read)
+read("jjC")
