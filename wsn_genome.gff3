@@ -1,0 +1,56 @@
+##sequence-region CY010795.1 1 2313
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=370129
+CY010795.1	Genbank	region	1	2313	.	+	.	ID=id0;Dbxref=taxon:370129;collection-date=1933;country=United Kingdom;gbkey=Src;lab-host=Egg passage(s);mol_type=genomic RNA;nat-host=Human;segment=1;serotype=H1N1;strain=A/WSN/1933 TS61
+CY010795.1	Genbank	gene	16	2295	.	+	.	ID=gene0;Name=PB2;gbkey=Gene;gene=PB2;gene_biotype=protein_coding
+CY010795.1	Genbank	CDS	16	2295	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47965.1;Name=ABF47965.1;gbkey=CDS;gene=PB2;product=polymerase PB2;protein_id=ABF47965.1
+
+##sequence-region CY010794.1 1 2302
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=370129
+CY010794.1	Genbank	region	1	2302	.	+	.	ID=id0;Dbxref=taxon:370129;collection-date=1933;country=United Kingdom;gbkey=Src;lab-host=Egg passage(s);mol_type=genomic RNA;nat-host=Human;segment=2;serotype=H1N1;strain=A/WSN/1933 TS61
+CY010794.1	Genbank	gene	2	2275	.	+	.	ID=gene0;Name=PB1;gbkey=Gene;gene=PB1;gene_biotype=protein_coding
+CY010794.1	Genbank	CDS	2	2275	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47963.1;Name=ABF47963.1;gbkey=CDS;gene=PB1;product=polymerase PB1;protein_id=ABF47963.1
+CY010794.1	Genbank	gene	96	368	.	+	.	ID=gene1;Name=PB1-F2;gbkey=Gene;gene=PB1-F2;gene_biotype=protein_coding
+CY010794.1	Genbank	CDS	96	368	.	+	0	ID=cds1;Parent=gene1;Dbxref=NCBI_GP:ABF47964.1;Name=ABF47964.1;gbkey=CDS;gene=PB1-F2;product=PB1-F2 protein;protein_id=ABF47964.1
+
+##sequence-region CY010793.1 1 2206
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=370129
+CY010793.1	Genbank	region	1	2206	.	+	.	ID=id0;Dbxref=taxon:370129;collection-date=1933;country=United Kingdom;gbkey=Src;lab-host=Egg passage(s);mol_type=genomic RNA;nat-host=Human;segment=3;serotype=H1N1;strain=A/WSN/1933 TS61
+CY010793.1	Genbank	gene	14	2164	.	+	.	ID=gene0;Name=PA;gbkey=Gene;gene=PA;gene_biotype=protein_coding
+CY010793.1	Genbank	CDS	14	2164	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47962.1;Name=ABF47962.1;gbkey=CDS;gene=PA;product=polymerase PA;protein_id=ABF47962.1
+
+##sequence-region CY010792.1 1 854
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=370129
+CY010792.1	Genbank	region	1	854	.	+	.	ID=id0;Dbxref=taxon:370129;collection-date=1933;country=United Kingdom;gbkey=Src;lab-host=Egg passage(s);mol_type=genomic RNA;nat-host=Human;segment=8;serotype=H1N1;strain=A/WSN/1933 TS61
+CY010792.1	Genbank	gene	14	851	.	+	.	ID=gene0;Name=NS2;gbkey=Gene;gene=NS2;gene_biotype=protein_coding
+CY010792.1	Genbank	CDS	14	43	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47961.1;Name=ABF47961.1;gbkey=CDS;gene=NS2;product=nonstructural protein 2;protein_id=ABF47961.1
+CY010792.1	Genbank	CDS	516	851	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47961.1;Name=ABF47961.1;gbkey=CDS;gene=NS2;product=nonstructural protein 2;protein_id=ABF47961.1
+CY010792.1	Genbank	gene	14	706	.	+	.	ID=gene1;Name=NS1;gbkey=Gene;gene=NS1;gene_biotype=protein_coding
+CY010792.1	Genbank	CDS	14	706	.	+	0	ID=cds1;Parent=gene1;Dbxref=NCBI_GP:ABF47960.1;Name=ABF47960.1;gbkey=CDS;gene=NS1;product=nonstructural protein 1;protein_id=ABF47960.1
+
+##sequence-region CY010791.1 1 1537
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=370129
+CY010791.1	Genbank	region	1	1537	.	+	.	ID=id0;Dbxref=taxon:370129;collection-date=1933;country=United Kingdom;gbkey=Src;lab-host=Egg passage(s);mol_type=genomic RNA;nat-host=Human;segment=5;serotype=H1N1;strain=A/WSN/1933 TS61
+CY010791.1	Genbank	gene	33	1529	.	+	.	ID=gene0;Name=NP;gbkey=Gene;gene=NP;gene_biotype=protein_coding
+CY010791.1	Genbank	CDS	33	1529	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47959.1;Name=ABF47959.1;gbkey=CDS;gene=NP;product=nucleocapsid protein;protein_id=ABF47959.1
+
+##sequence-region CY010789.1 1 996
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=370129
+CY010789.1	Genbank	region	1	996	.	+	.	ID=id0;Dbxref=taxon:370129;collection-date=1933;country=United Kingdom;gbkey=Src;lab-host=Egg passage(s);mol_type=genomic RNA;nat-host=Human;segment=7;serotype=H1N1;strain=A/WSN/1933 TS61
+CY010789.1	Genbank	gene	15	996	.	+	.	ID=gene0;Name=M2;gbkey=Gene;gene=M2;gene_biotype=protein_coding
+CY010789.1	Genbank	CDS	15	40	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47957.1;Name=ABF47957.1;gbkey=CDS;gene=M2;product=matrix protein 2;protein_id=ABF47957.1
+CY010789.1	Genbank	CDS	729	996	.	+	1	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47957.1;Name=ABF47957.1;gbkey=CDS;gene=M2;product=matrix protein 2;protein_id=ABF47957.1
+CY010789.1	Genbank	gene	15	773	.	+	.	ID=gene1;Name=M1;gbkey=Gene;gene=M1;gene_biotype=protein_coding
+CY010789.1	Genbank	CDS	15	773	.	+	0	ID=cds1;Parent=gene1;Dbxref=NCBI_GP:ABF47956.1;Name=ABF47956.1;gbkey=CDS;gene=M1;product=matrix protein 1;protein_id=ABF47956.1
+
+##sequence-region CY010788.1 1 1746
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=370129
+CY010788.1	Genbank	region	1	1746	.	+	.	ID=id0;Dbxref=taxon:370129;collection-date=1933;country=United Kingdom;gbkey=Src;lab-host=Egg passage(s);mol_type=genomic RNA;nat-host=Human;segment=4;serotype=H1N1;strain=A/WSN/1933 TS61
+CY010788.1	Genbank	gene	20	1717	.	+	.	ID=gene0;Name=HA;gbkey=Gene;gene=HA;gene_biotype=protein_coding
+CY010788.1	Genbank	CDS	20	1717	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47955.1;Name=ABF47955.1;gbkey=CDS;gene=HA;product=hemagglutinin;protein_id=ABF47955.1
+
+##sequence-region CY010790.1 1 1370
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=370129
+CY010790.1	Genbank	region	1	1370	.	+	.	ID=id0;Dbxref=taxon:370129;collection-date=1933;country=United Kingdom;gbkey=Src;lab-host=Egg passage(s);mol_type=genomic RNA;nat-host=Human;segment=6;serotype=H1N1;strain=A/WSN/1933 TS61
+CY010790.1	Genbank	gene	9	1370	.	+	.	ID=gene0;Name=NA;gbkey=Gene;gene=NA;gene_biotype=protein_coding
+CY010790.1	Genbank	CDS	9	1370	.	+	0	ID=cds0;Parent=gene0;Dbxref=NCBI_GP:ABF47958.1;Name=ABF47958.1;gbkey=CDS;gene=NA;product=neuraminidase;protein_id=ABF47958.1
+
