@@ -1,5 +1,7 @@
 #!/usr/bin/python3.5
 # -*- coding: Utf-8 -*-
+'''Ce script récupère la séquence des jonctions présente dans les fichiers csv contenant les résultats de sjcount'''
+
 
 import argparse
 

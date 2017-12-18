@@ -1,5 +1,5 @@
 #!/bin/bash
-## Execute samtools idxstats sur chaque bam, pour avoir le nombre de reads par segments. 
+ 
 '''Ce script récupère la séquence des jonctions présente dans les fichiers csv contenant les résultats de sjcount'''
 
 
