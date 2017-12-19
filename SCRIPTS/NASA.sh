@@ -7,7 +7,16 @@ set -e
 # $3 = fasta contenant le génome
 # $4 = dossier sjcount
 # $5 = gff associé au génome
-# $6 = seuil 
+# $6 = seuil
+
+if [ -n "$6" ]
+then
+	arg=$6
+else
+	echo "Using default treshold (0.05)"
+	arg="0.05"
+fi
+
 
 mkdir -p $2
 mkdir -p $2/Logs/
@@ -30,7 +39,7 @@ echo "Searching for junctions ..."
 
 mkdir -p $2/Junctions/
 
-./SCRIPTS/Pipeline_Final/Sjcount_Tresholding.sh $2/Sjcount $2 $6
+./SCRIPTS/Pipeline_Final/Sjcount_Tresholding.sh $2/Sjcount $2 $arg
 
 echo "Junction search : Success !"
 
