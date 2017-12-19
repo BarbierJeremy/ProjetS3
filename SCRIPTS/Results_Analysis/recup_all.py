@@ -39,8 +39,9 @@ def recup_jonction(args):
 		j['MaxEntScan5'] = 0
 		j['non_episse'] = ''
 		j['episse'] = ''
+		j['prot'] = ''
 		o = open(args.output_file,'w')
-		o.write('Segment'+'\t'+'Junction_First_Position'+'\t'+'Junction_Second_Position'+'\t'+'Strand'+'\t'+'Len_not_Spliced'+'\t'+'Len_Spliced'+'\t'+'GC_not_Spliced'+'\t'+'GC_Spliced'+'\t'+'Seq3(maxentscan)'+'\t'+'Seq5(maxentscan)'+'\t'+'MaxEntScan3'+'\t'+'MaxEntScan5'+'\t'+'not_Spliced'+'\t'+'Spliced'+"\n")
+		o.write('Segment'+'\t'+'Gene'+'\t'+'Junction_First_Position'+'\t'+'Junction_Second_Position'+'\t'+'Strand'+'\t'+'Len_not_Spliced'+'\t'+'Len_Spliced'+'\t'+'GC_not_Spliced'+'\t'+'GC_Spliced'+'\t'+'Seq3(maxentscan)'+'\t'+'Seq5(maxentscan)'+'\t'+'MaxEntScan3'+'\t'+'MaxEntScan5'+'\t'+'not_Spliced'+'\t'+'Spliced'+"\n")
 		f2 = open(args.jonction_csv,'r')
 		for l in f2:
 			print ('*******')
@@ -72,13 +73,13 @@ def recup_jonction(args):
 						if line.split('\t')[2] == 'gene':
 							if i == 0:
 								gene_exist = True
-								prot = line.split('\t')[8].split(';')[1].split('=')[1]
+								j['prot'] = line.split('\t')[8].split(';')[1].split('=')[1]
 								un = int(line.split('\t')[3])
 								deux = int(line.split('\t')[4])
 								
 								i = i+1
 							elif int(line.split('\t')[3]) <= un and int(line.split('\t')[4]) >= deux:
-								prot = line.split('\t')[8].split(';')[1].split('=')[1]
+								j['prot'] = line.split('\t')[8].split(';')[1].split('=')[1]
 								un = int(line.split('\t')[3])
 								deux = int(line.split('\t')[4])
 							elif int(line.split('\t')[3]) < un:
@@ -119,7 +120,7 @@ def recup_jonction(args):
 						j['MaxEntScan3'] = line.split('\t')[6].strip()
 						j['MaxEntScan5'] = line.split('\t')[7].strip()
 				f4.close()
-				o.write(j['Segment']+'\t'+str(j['First'])+'\t'+str(j['Second'])+'\t'+j['Strand']+'\t'+str(j['taille_non_episse'])+'\t'+str(j['taille_episse'])+'\t'+str(j['GC_non_episse'])+'\t'+str(j['GC_episse'])+'\t'+j['Seq3']+'\t'+j['Seq5']+'\t'+str(j['MaxEntScan3'])+'\t'+str(j['MaxEntScan5'])+'\t'+j['non_episse']+'\t'+j['episse']+"\n")
+				o.write(j['Segment']+'\t'+j['prot']+'\t'+str(j['First'])+'\t'+str(j['Second'])+'\t'+j['Strand']+'\t'+str(j['taille_non_episse'])+'\t'+str(j['taille_episse'])+'\t'+str(j['GC_non_episse'])+'\t'+str(j['GC_episse'])+'\t'+j['Seq3']+'\t'+j['Seq5']+'\t'+str(j['MaxEntScan3'])+'\t'+str(j['MaxEntScan5'])+'\t'+j['non_episse']+'\t'+j['episse']+"\n")
 
 			compt = compt+1
 		f2.close()
