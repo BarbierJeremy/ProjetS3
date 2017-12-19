@@ -26,12 +26,12 @@ Pour exécuter le pipeline les logiciels suivant doivent être installé.
 Sjcount est nécessaire au bon fonctionnement du pipeline, il permet de compter les reads qui se trouvent sur les jonctions d'épissage. 
 La documentation de Sjcount se trouve à l'addresse suivante : [https://github.com/pervouchine/sjcount-full/blob/master/latex/sjcount.pdf](https://github.com/pervouchine/sjcount-full/blob/master/latex/sjcount.pdf)
 
-### MaxEntScan
+### [MaxEntScan](http://genes.mit.edu/burgelab/maxent/Xmaxentscan_scoreseq.html)
 
 MaxEntScan est également nécessaire au bon fonctionnement du pipeline.
 Cependant, une [version](https://github.com/kepbod/maxentpy) python des scripts originaux est déjà présent dans l'archive github actuel. Il n'est donc à priori **pas nécessaire de le réinstaller**. 
 
-### Python3 et Biopython
+### [Python3](https://doc.ubuntu-fr.org/python) et [Biopython](http://biopython.org/wiki/Download)
 
 [Python3](https://doc.ubuntu-fr.org/python) est plus que nécessaire à l'exécution du pipeline (car de nombreux scripts sont écrit en python3). 
 
