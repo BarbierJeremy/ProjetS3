@@ -1,4 +1,4 @@
-le pipeline prend en entré des BAM issu d'un alignement et le génome en format  fasta 
+le pipeline prend en entré des BAM issu d'un alignement et le génome en format  fasta et retourne des coordionnées de jonction d'épissage 
 
 
 il faut SJcount qui fais partit de IPSA, qui est une suite de logiciel, 
@@ -14,3 +14,10 @@ par rapport au read non épisser pour la même jonction, il faut qu'il y est au 
 pour le script MaxEntScan nous avons utiliser les fonction issu de ce github 
 https://github.com/kepbod/maxentpy 
 qui sont une version python des scripts originaux, cela nous donne une force des sites d'épissage en 5' et 3'
+ajouter dans un fichier csv des jonction qui contient aussi les séquence en 5' et 3' utiliser dans maxentscan.
+il est necessaire d'avoir biopython, pour l'installer suivre ce lien:
+http://biopython.org/wiki/Download
+
+
+
+
