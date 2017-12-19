@@ -1,4 +1,4 @@
-# NASA
+# New Approch for Splicing Analysis (NASA)
 
 ## Rôle du pipeline
 
@@ -36,9 +36,10 @@ Arguments :
 Les différentes étapes de l'analyse sont :
 1. Utilisation de Sjcount sur chaque fichier .bam présents dans le dossier fournis en argument : `#Rajouter le nom du script`  
 Sjcount va sortir les jonctions d'épissages (Junction) et les jonctions correspondant au transcript non épissé (Count). 
-2. Les jonction sont ensuite récupérés par rapport au seuil donné en argument (seuil = pourcentage de read confirmant l'épissage)
-3. 
-
+2. Les jonctions sont ensuite récupérés par rapport au seuil donné en argument du pipeline (seuil = pourcentage de read confirmant l'épissage) : `.py` et `.sh`
+Les fichiers créés contiennent les jonctions au format csv.
+3. MaxEntScan est ensuite exécuté sur les jonctions obtenues précédemment pour déterminer la force des sites d'épissages : `.py` et `.sh` 
+4. Enfin le dernier scripts permet d'assembler les résultats précedemment obtenues : `.py` et `.sh`
 
 
 
