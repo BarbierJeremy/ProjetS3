@@ -19,8 +19,30 @@ Exemple de résultat obtenue :
     
 ## Logiciel requis
 
-biopython  
-sjcount  
+Pour exécuter le pipeline les logiciels suivant doivent être installé.
+
+### [Sjcount](https://github.com/pervouchine/sjcount-full)
+
+Sjcount est nécessaire au bon fonctionnement du pipeline, il permet de compter les reads qui se trouvent sur les jonctions d'épissage. 
+La documentation de Sjcount se trouve à l'addresse suivante : [https://github.com/pervouchine/sjcount-full/blob/master/latex/sjcount.pdf](https://github.com/pervouchine/sjcount-full/blob/master/latex/sjcount.pdf)
+
+### MaxEntScan
+
+MaxEntScan est également nécessaire au bon fonctionnement du pipeline.
+Cependant, une [version](https://github.com/kepbod/maxentpy) python des scripts originaux est déjà présent dans l'archive github actuel. Il n'est donc à priori **pas nécessaire de le réinstaller**. 
+
+### Python3 et Biopython
+
+[Python3](https://doc.ubuntu-fr.org/python) est plus que nécessaire à l'exécution du pipeline (car de nombreux scripts sont écrit en python3). 
+
+    sudo apt update
+    sudo apt install python3.6 
+
+Il est également nécessaire d'avoir installé [biopython](http://biopython.org/wiki/Download)
+
+    sudo apt install python3-pip
+    python3.6 -m pip install biopython
+  
 
 
 ## Pipeline
@@ -50,7 +72,7 @@ Sjcount va compter les reads supportant les jonctions d'épissages (fichier Junc
 2. Les jonctions d'intérêt sont ensuite récupérées par rapport au seuil donné en argument du pipeline (seuil = pourcentage de read confirmant l'épissage par rapport aux reads totaux s'alignant à cet endroit) : `Get_Junction.py` et `Sjcount_Tresholding.sh`. Par défaut, le seuil 5% est utilisé, c'est à dire que sont conservées les jonctions pour lesquelles les reads supportant la version épissée du transcrit représentent au minimum 5% des reads s'alignant à cet endroit. 
 Les fichiers créés contiennent les jonctions d'intérêt au format csv.
 
-3. MaxEntScan est ensuite exécuté sur les jonctions d'intérêt pour déterminer la force des sites d'épissages : `fonction-tsvmaxentscan.py` et `scriptmaxentscan.sh` 
+3. MaxEntScan est ensuite exécuté sur les jonctions d'intérêt pour déterminer la force des sites d'épissages en 5' et 3' : `fonction-tsvmaxentscan.py` et `scriptmaxentscan.sh`  
 
 4. Enfin le dernier scripts permet d'assembler les résultats précedemments obtenus, et calcule quelques statistiques basiques telles que les taux de gc des séquences épissées et non épissées : `recup_all.py` et `recup_all.sh`
 
