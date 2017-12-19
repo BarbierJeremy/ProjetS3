@@ -19,8 +19,8 @@ Exemple de résultat obtenue :
     
 ## Logiciel requis
 
-biopython
-sjcount
+biopython  
+sjcount  
 
 
 ## Pipeline
@@ -39,14 +39,7 @@ Sjcount va sortir les jonctions d'épissages (Junction) et les jonctions corresp
 2. Les jonctions sont ensuite récupérés par rapport au seuil donné en argument du pipeline (seuil = pourcentage de read confirmant l'épissage) : `.py` et `.sh`
 Les fichiers créés contiennent les jonctions au format csv.
 3. MaxEntScan est ensuite exécuté sur les jonctions obtenues précédemment pour déterminer la force des sites d'épissages : `.py` et `.sh` 
-4. Enfin le dernier scripts permet d'assembler les résultats précedemment obtenues : `.py` et `.sh`
+4. Enfin le dernier scripts permet d'assembler les résultats précedemment obtenues et calcul quelques statistique basic tel que les taux de gc des séquences épissé et non épissé : `.py` et `.sh`
 
-
-
-
-il faut biopython en dependance pour maxentscan
-
-offset 1 : ns1/ns2
-offset 8 : reste
 
  
