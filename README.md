@@ -41,5 +41,24 @@ Les fichiers créés contiennent les jonctions au format csv.
 3. MaxEntScan est ensuite exécuté sur les jonctions obtenues précédemment pour déterminer la force des sites d'épissages : `.py` et `.sh` 
 4. Enfin le dernier scripts permet d'assembler les résultats précedemment obtenues et calcul quelques statistique basic tel que les taux de gc des séquences épissé et non épissé : `.py` et `.sh`
 
+L'arborescence de la sortie est la suivante :
+
+    $ NASA
+    .
+    ├── Logs
+    │   ├── sjcount.log
+    ├── Sjcount
+    │   ├── Junction
+    │   │   └── Fichiers_Junction.txt 
+    │   └── Count
+    │       └── Fichiers_Count.txt
+    ├── Junctions
+    │   └── Fichiers_Junction_Filter.csv
+    ├── MaxEntScan
+    │   └── Fichiers_MaxEntScan.csv    
+    └── Analyse
+        └── Fichiers_All.csv
+
+
 
  
