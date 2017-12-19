@@ -44,7 +44,7 @@ def recup_jonction(args):
 						if line[0] != '>':
 							sequence = sequence+line.strip()
 				if j['Strand'] == '+':
-					o.write('> '+j['Segment']+'\t'+j['First']+'\t'+j['Second']+'\t'+j['Strand']+'\n'+sequence[int(j['First'])+1:int(j['Second'])+1]+"\n"+"\n"+"\n")
+					o.write('> '+j['Segment']+'\t'+j['First']+'\t'+j['Second']+'\t'+j['Strand']+'\n'+sequence[int(j['First'])-1:int(j['Second'])-1]+"\n"+"\n"+"\n")
 				else:
 					sequence = sequence.replace('A','t')
 					sequence = sequence.replace('T','a')
@@ -52,7 +52,7 @@ def recup_jonction(args):
 					sequence = sequence.replace('G','c')
 					sequence = sequence.upper()
 					sequence = sequence[::-1]
-					o.write('> '+j['Segment']+'\t'+j['First']+'\t'+j['Second']+'\t'+j['Strand']+'\n'+sequence[int(j['First'])+1:int(j['Second'])+1]+"\n"+"\n"+"\n")
+					o.write('> '+j['Segment']+'\t'+j['First']+'\t'+j['Second']+'\t'+j['Strand']+'\n'+sequence[int(j['First'])-1:int(j['Second'])-1]+"\n"+"\n"+"\n")
 
 
 
