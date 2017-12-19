@@ -1,0 +1,16 @@
+le pipeline prend en entré des BAM issu d'un alignement et le génome en format  fasta 
+
+
+il faut SJcount qui fais partit de IPSA, qui est une suite de logiciel, 
+SJcount sert à conter les reads qui se trouve sur une jonction d'épissage. 
+il faut pour cela des BAM, issu d'un aligneur 
+la documentation de SJ count se trouve dans ce gitHub:
+https://github.com/pervouchine/sjcount-full
+ensuite un script en python trie les jonction du pourcentage de read épisser 
+par rapport au read non épisser pour la même jonction, il faut qu'il y est au moins 5 % de read épisser 
+
+
+
+pour le script MaxEntScan nous avons utiliser les fonction issu de ce github 
+https://github.com/kepbod/maxentpy 
+qui sont une version python des scripts originaux, cela nous donne une force des sites d'épissage en 5' et 3'
