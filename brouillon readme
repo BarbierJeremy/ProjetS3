@@ -1,22 +1,22 @@
-le pipeline prend en entré des BAM issu d'un alignement et le génome en format  fasta et retourne des coordionnées de jonction d'épissage 
+Pour exécuter le pipeline les logiciels suivant doivent être installé.
 
+### [Sjcount](https://github.com/pervouchine/sjcount-full)
 
-il faut SJcount qui fais partit de IPSA, qui est une suite de logiciel, 
-SJcount sert à conter les reads qui se trouve sur une jonction d'épissage. 
-il faut pour cela des BAM, issu d'un aligneur 
-la documentation de SJ count se trouve dans ce gitHub:
-https://github.com/pervouchine/sjcount-full
-ensuite un script en python trie les jonction du pourcentage de read épisser 
-par rapport au read non épisser pour la même jonction, il faut qu'il y est au moins 5 % de read épisser 
+Sjcount est nécessaire au bon fonctionnement du pipeline, il permet de compter les reads qui se trouvent sur les jonctions d'épissage. 
+La documentation de Sjcount se trouve à l'addresse suivante : [https://github.com/pervouchine/sjcount-full/blob/master/latex/sjcount.pdf](https://github.com/pervouchine/sjcount-full/blob/master/latex/sjcount.pdf)
 
+### MaxEntScan
 
+MaxEntScan est également nécessaire au bon fonctionnement du pipeline.
+Cependant, une [version](https://github.com/kepbod/maxentpy) python des scripts originaux est déjà présent dans l'archive github actuel. Il n'est donc à priori **pas nécessaire de le réinstaller**. 
 
-pour le script MaxEntScan nous avons utiliser les fonction issu de ce github 
-https://github.com/kepbod/maxentpy 
-qui sont une version python des scripts originaux, cela nous donne une force des sites d'épissage en 5' et 3'
+ cela nous donne une force des sites d'épissage en 5' et 3'
 ajouter dans un fichier csv des jonction qui contient aussi les séquence en 5' et 3' utiliser dans maxentscan.
-il est necessaire d'avoir biopython, pour l'installer suivre ce lien:
-http://biopython.org/wiki/Download
+
+### Python3 et biopython
+
+Python3 est plus que nécessaire à l'exécution du pipeline (car de nombreux scripts sont écrit en python3). 
+Il est également nécessaire d'avoir installé [biopython](http://biopython.org/wiki/Download)
 
 
 
