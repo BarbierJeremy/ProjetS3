@@ -1,4 +1,4 @@
-# New Approch for Splicing Analysis (NASA)
+# New Approach for Splicing Analysis (NASA)
 
 ## Rôle du pipeline
 
