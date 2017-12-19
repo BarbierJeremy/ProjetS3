@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #coding: utf-8
-#on donne tsv en premier puis genome en multi fasta puis fichier de sortit https://github.com/kepbod/maxentpy    
+#on donne tsv en premier puis genome en multi fasta puis fichier de sortie https://github.com/kepbod/maxentpy    
 from Bio import SeqIO
 import sys
 import os
@@ -14,10 +14,10 @@ from maxentpy import maxent
 
 fichsorti= open(sys.argv[3], 'w') # ouvre fichier pour ecrire 
 di={}
-print(sys.argv[2])
+##print(sys.argv[2])
 for seq_record in SeqIO.parse(str(sys.argv[2]), "fasta"): #parse le fasta pour mettre sequence et id dans dictionaire 
 	di[seq_record.id]=seq_record
-	print(seq_record.id)
+	##print(seq_record.id)
 
 
 with open(sys.argv[1]) as f: # ouvre le fichier avec les jonction 
