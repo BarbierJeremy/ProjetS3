@@ -29,18 +29,18 @@ Le pipeline s'exécute via le script NASA.sh (Attention ! Il faut être à la ra
 
     ./SCRIPTS/NASA.sh 1 2 3 4 5 6 
 
-Arguments : 
-
-OBLIGATOIRES : 
-1 : Chemin vers le dossier contenant les fichiers au format bam à utiliser 
-2 : Chemin vers le dossier où placer les résultats (s'il n'existe pas, il sera créé) 
-3 : Chemin vers le génome au format fasta 
-4 : Chemin vers le dossier contenant sjcount (voir sjcount - installation)
-5 : Chemin vers le fichier gff contenant l'annotation du génome 
-
-Optionnel
-6 : Seuil à utiliser pour le rapport épissé/non-épissé (voir étapes, partie 2.). Si aucun seuil n'est indiqué, le seuil 5% (0.05) sera utilisé. 
-
+Arguments :   
+  
+OBLIGATOIRES :   
+1 : Chemin vers le dossier contenant les fichiers au format bam à utiliser  
+2 : Chemin vers le dossier où placer les résultats (s'il n'existe pas, il sera créé)   
+3 : Chemin vers le génome au format fasta   
+4 : Chemin vers le dossier contenant sjcount (voir sjcount - installation)  
+5 : Chemin vers le fichier gff contenant l'annotation du génome   
+  
+Optionnel  
+6 : Seuil à utiliser pour le rapport épissé/non-épissé (voir étapes, partie 2.). Si aucun seuil n'est indiqué, le seuil 5% (0.05) sera utilisé.   
+  
 
 # Etapes de l'analyse :
 
