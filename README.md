@@ -25,21 +25,34 @@ sjcount
 
 ## Pipeline
 
-Le pipeline s'exécute via le script Pipeline_Final.sh (Attention ! Il faut être à la racine pour exécuter le script):
+Le pipeline s'exécute via le script NASA.sh (Attention ! Il faut être à la racine pour exécuter le script):
 
-    ./SCRIPTS/Pipeline_Final.sh #Rajouter les arguments : dossier_bam genome gff sortie
+    ./SCRIPTS/NASA.sh 1 2 3 4 5 6 
 
-Arguments :
+Arguments : 
 
-#TODO avec les valeurs par défauts
+OBLIGATOIRES : 
+1 : Chemin vers le dossier contenant les fichiers au format bam à utiliser 
+2 : Chemin vers le dossier où placer les résultats (s'il n'existe pas, il sera créé) 
+3 : Chemin vers le génome au format fasta 
+4 : Chemin vers le dossier contenant sjcount (voir sjcount - installation)
+5 : Chemin vers le fichier gff contenant l'annotation du génome 
 
-Les différentes étapes de l'analyse sont :
-1. Utilisation de Sjcount sur chaque fichier .bam présents dans le dossier fournis en argument : `#Rajouter le nom du script`  
-Sjcount va sortir les jonctions d'épissages (Junction) et les jonctions correspondant au transcript non épissé (Count). 
-2. Les jonctions sont ensuite récupérés par rapport au seuil donné en argument du pipeline (seuil = pourcentage de read confirmant l'épissage) : `.py` et `.sh`
-Les fichiers créés contiennent les jonctions au format csv.
-3. MaxEntScan est ensuite exécuté sur les jonctions obtenues précédemment pour déterminer la force des sites d'épissages : `.py` et `.sh` 
-4. Enfin le dernier scripts permet d'assembler les résultats précedemment obtenues et calcul quelques statistique basic tel que les taux de gc des séquences épissé et non épissé : `.py` et `.sh`
+Optionnel
+6 : Seuil à utiliser pour le rapport épissé/non-épissé (voir étapes, partie 2.). Si aucun seuil n'est indiqué, le seuil 5% (0.05) sera utilisé. 
+
+
+# Etapes de l'analyse :
+
+1. Utilisation de Sjcount sur chaque fichier .bam présents dans le dossier fournis en argument : `script_sjcount.sh`  
+Sjcount va compter les reads supportant les jonctions d'épissages (fichier Junction.txt) et les comptages correspondant au transcrit non épissé (Fichier Count.txt).
+ 
+2. Les jonctions d'intérêt sont ensuite récupérées par rapport au seuil donné en argument du pipeline (seuil = pourcentage de read confirmant l'épissage par rapport aux reads totaux s'alignant à cet endroit) : `Get_Junction.py` et `Sjcount_Tresholding.sh`. Par défaut, le seuil 5% est utilisé, c'est à dire que sont conservées les jonctions pour lesquelles les reads supportant la version épissée du transcrit représentent au minimum 5% des reads s'alignant à cet endroit. 
+Les fichiers créés contiennent les jonctions d'intérêt au format csv.
+
+3. MaxEntScan est ensuite exécuté sur les jonctions d'intérêt pour déterminer la force des sites d'épissages : `fonction-tsvmaxentscan.py` et `scriptmaxentscan.sh` 
+
+4. Enfin le dernier scripts permet d'assembler les résultats précedemments obtenus, et calcule quelques statistiques basiques telles que les taux de gc des séquences épissées et non épissées : `recup_all.py` et `recup_all.sh`
 
 L'arborescence de la sortie est la suivante :
 
