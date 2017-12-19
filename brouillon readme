@@ -13,11 +13,14 @@ Cependant, une [version](https://github.com/kepbod/maxentpy) python des scripts 
  cela nous donne une force des sites d'épissage en 5' et 3'
 ajouter dans un fichier csv des jonction qui contient aussi les séquence en 5' et 3' utiliser dans maxentscan.
 
-### Python3 et biopython
+### Python3 et Biopython
 
-Python3 est plus que nécessaire à l'exécution du pipeline (car de nombreux scripts sont écrit en python3). 
+[Python3](https://doc.ubuntu-fr.org/python) est plus que nécessaire à l'exécution du pipeline (car de nombreux scripts sont écrit en python3). 
+
+    sudo apt update
+    sudo apt install python3.6 
+
 Il est également nécessaire d'avoir installé [biopython](http://biopython.org/wiki/Download)
 
-
-
-
+    sudo apt install python3-pip
+    python3.6 -m pip install biopython
